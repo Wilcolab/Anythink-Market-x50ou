@@ -8,6 +8,4 @@ export async function getItemAndComments(id) {
   return [item, comments];
 }
 
-export const showItemImage = (image) => {
-  return image === "" ? placeholder : image;
-};
+export const showItemImage = (image) => (image === "" ? placeholder : image);
