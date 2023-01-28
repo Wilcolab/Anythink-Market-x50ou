@@ -1,4 +1,5 @@
 import agent from "../../../agent";
+import placeholder from "../../../imgs/placeholder.png";
 
 export async function getItemAndComments(id) {
   const item = await agent.Items.get(id);
@@ -6,3 +7,7 @@ export async function getItemAndComments(id) {
 
   return [item, comments];
 }
+
+export const showItemImage = (image) => {
+  return image === "" ? placeholder : image;
+};
